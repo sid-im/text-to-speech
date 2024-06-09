@@ -1,0 +1,4 @@
+flask
+gtts
+deep_translator
+PyPDF2
