@@ -1,4 +1,4 @@
-flask
+Flask
 gtts
-deep_translator
-PyPDF2
+PyPDF2>=3.0.0
+deep-translator
