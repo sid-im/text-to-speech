@@ -15,10 +15,10 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def extract_text_from_pdf(filepath):
-    pdfReader = PyPDF2.PdfFileReader(filepath)
+    pdfReader = PyPDF2.PdfReader(filepath)
     text = ''
-    for page in range(pdfReader.numPages):
-        text += pdfReader.getPage(page).extract_text()
+    for page in pdfReader.pages:
+        text += page.extract_text()
     return text
 
 def convert_text_to_speech(text, lang='kn'):
